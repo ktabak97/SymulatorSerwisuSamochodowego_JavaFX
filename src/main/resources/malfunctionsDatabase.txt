@@ -1,0 +1,12 @@
+﻿Silnik
+Akumulator
+Koła
+Napęd, skrzynia biegów
+Kluczki, zamki, alarm
+Elektryka
+Alternator / prądnica
+Ogrzewanie / Chłodzenie
+Układ hamulcowy
+Układ paliwowy
+Diesel, układ wtryskowy
+Pozostałe

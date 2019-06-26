@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="555.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="car_service.Controller">
+    <content>
+        <Pane prefHeight="571.0" prefWidth="798.0">
+            <children>
+                <GridPane alignment="center" hgap="10" layoutX="36.0" layoutY="80.0" prefHeight="485.0" prefWidth="388.0" vgap="10">
+
+                    <Label text="Model" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Label text="Silnik" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Label text="Rok" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="VIN" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <Label text="Podnosnik" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <Label text="Garaż" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    <Label text="Marka" GridPane.columnIndex="1" />
+                    <Label text="Mechanik" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                    <Label text="Klucz płaski" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                    <Label text="Młotek" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                    <Label text="Wyważarka" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                    <CheckBox fx:id="ifElevator" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                    <CheckBox fx:id="ifGarage" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                    <CheckBox fx:id="ifMechanic" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                    <CheckBox fx:id="ifWrench" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                    <CheckBox fx:id="ifHammer" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                    <CheckBox fx:id="ifBalancer" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                    <TextField fx:id="brand" onAction="#newCar" GridPane.columnIndex="2" />
+                    <TextField fx:id="model" onAction="#newCar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <TextField fx:id="engine" onAction="#newCar" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <TextField fx:id="year" onAction="#newCar" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                    <TextField fx:id="vinNumber" onAction="#newCar" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                    <TextField fx:id="time" onAction="#newCar" text="10000" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                    <Label fx:id="actualElevator" prefHeight="17.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="actualGarage" prefHeight="17.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="actualMechanic" prefHeight="17.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="actualWrench" prefHeight="17.0" prefWidth="76.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="actualHammer" prefHeight="17.0" prefWidth="77.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="actualBalancer" prefHeight="17.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Label>
+                    <Label minHeight="22.0" prefHeight="22.0" prefWidth="141.0" text="Usterka" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                    <ComboBox fx:id="carMalfunction" prefWidth="150.0" promptText="Wybierz" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                    <Button mnemonicParsing="false" onAction="#test" text="Test" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                    <Button onAction="#newCar" prefHeight="25.0" prefWidth="149.0" text="Dodaj samochod" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                    <Label text="Czas naprawy" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                    <Label text="ms" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="0.0" minHeight="20.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="0.0" minHeight="20.0" prefHeight="0.0" />
+                        <RowConstraints />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints maxHeight="0.0" minHeight="20.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="0.0" minHeight="20.0" prefHeight="0.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints minHeight="20.0" />
+                        <RowConstraints maxHeight="31.66668701171875" minHeight="20.0" prefHeight="20.0" />
+                        <RowConstraints maxHeight="27.666656494140625" minHeight="20.0" prefHeight="20.0" />
+                        <RowConstraints maxHeight="27.666656494140625" minHeight="20.0" prefHeight="20.0" />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints maxHeight="0.0" minHeight="20.0" prefHeight="0.0" />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+
+
+                </GridPane>
+                <TreeView fx:id="treeView" layoutX="433.0" layoutY="79.0" prefHeight="455.0" prefWidth="301.0">
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#removeTreeItem" text="Usuń" />
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TreeView>
+                <Label layoutX="433.0" layoutY="55.0" text="Lista samochodów" />
+                <Label fx:id="update" layoutX="734.0" layoutY="79.0" />
+                <Label layoutX="44.0" layoutY="8.0" prefHeight="71.0" prefWidth="387.0" text="Symulator serwisu samochodowego">
+                    <font>
+                        <Font name="Monospaced Regular" size="20.0" />
+                    </font>
+                </Label>
+                <MenuBar prefHeight="25.0" prefWidth="798.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Ustawienia">
+                            <items>
+                                <Menu mnemonicParsing="false" text="Zmień ilość narzędzi">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#changeElevator" text="Podnośników" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changeGarage" text="Garaży" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changeMechanic" text="Mechaników" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changeWrench" text="Kluczy płaskich" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changeHammer" text="Młotków" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changeBalancer" text="Wyważarek" />
+                                    </items>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ImageView fx:id="logo" fitHeight="70.0" fitWidth="87.0" layoutX="663.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </content>
+</ScrollPane>
